@@ -21,7 +21,7 @@ mysql = lambda q: sqldf(q, globals())
 # data = None
 animation = None
 # proc_data = []
-pos = "Student Assistant"
+pos = "Graduate Teaching Assistant"
 
 # n = 10
 
@@ -57,17 +57,19 @@ def update_data(i):
     #     animation.event_source.stop()
     plt.cla()
 
-    bins = np.linspace(0, 10000, 50)
+    bins = np.linspace(0, 40000, 50)
     # proc_data = select_data(title=pos, year=i+2010)['Salary'].values
     
     plt.hist(proc_data[i], bins=bins, lw = 1, ec="darkslategray", fc = "#073642")
-    plt.axis([0, 10000, 0, 500])
+    plt.axis([0, 40000, 0, 225])
     # plt.gca().set_ylim(bottom=0)
-    plt.gca().set_title('Compensation for SAs from 2010-2020', fontweight='bold')
+    plt.gca().set_title('Compensation for GTAs from 2010-2020', fontweight='bold')
     plt.gca().set_ylabel('count')
     plt.gca().set_xlabel('compensation')
     tick = mtick.StrMethodFormatter('${x:,.0f}')
     plt.gca().xaxis.set_major_formatter(tick)
+    plt.xticks(fontsize=8)
+    plt.yticks(fontsize=8)
     plt.gca().annotate('{0}: {1} employees'.format(i+2010, len(proc_data[i])), xy=(0.65, 0.92), xycoords='axes fraction')
     # for i in range(2010, 2021):
     print(i + 2010)
@@ -88,7 +90,7 @@ def run_anim():
     # vid = animation.to_html5_video()
     # html = display.HTML(vid)
     
-    writer = anim.writers['ffmpeg'](fps=1.5)
+    writer = anim.writers['ffmpeg'](fps=1.2)
     animation.save('GTA.mp4', writer=writer, dpi=300)
     plt.close()
     print("hi")
