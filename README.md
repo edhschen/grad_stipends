@@ -8,7 +8,7 @@ https://open.ga.gov/
 
 ### examples
 For instance, salary trends for a few universities in the past eight years, along with average trendlines\
-<img src="main-stipends/res.png" width=70%>
+<img src="main-stipends/res.png" width=100%>
 
 and a time-evolving salary distribution for Georgia Tech TAs\
 <video src="https://user-images.githubusercontent.com/50782222/212172541-4eaf44dd-01e3-4d75-9209-2e5dd88f48d8.mp4" controls="controls"></video>
